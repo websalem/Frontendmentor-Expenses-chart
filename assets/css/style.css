@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+/* Primary */
+/* Neutral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27, 66%, 92%);
+  display: grid;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  max-width: 340px;
+  margin: auto;
+}
+
+.my-balance,
+.spending {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.my-balance {
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-balance h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(27, 66%, 92%);
+  margin-bottom: 0.25rem;
+}
+
+.my-balance p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.spending {
+  background-color: hsl(33, 100%, 98%);
+}
+
+.spending h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.week-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid hsl(27, 66%, 92%);
+}
+
+.week-day {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  border-radius: 5px;
+}
+
+.week-day:hover .chart {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.week-day:hover .amount {
+  display: block;
+}
+
+.week-day p {
+  color: hsl(28, 10%, 53%);
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.chart {
+  width: 40px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  align-self: flex-start;
+  position: relative;
+  cursor: pointer;
+}
+
+.week-day:nth-of-type(3) .chart {
+  height: 52.36%;
+  background-color: hsl(186, 34%, 60%);
+}
+
+.week-day:nth-of-type(3):hover .chart {
+  background-color: hsla(186, 34%, 60%, 0.5);
+}
+
+.month-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.this-month p {
+  color: hsl(28, 10%, 53%);
+  font-size: 1.25rem;
+}
+
+.this-month h2 {
+  font-size: 2.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: hsl(25, 47%, 15%);
+}
+
+.last-month,
+.this-month {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.last-month h2 {
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.last-month p {
+  color: hsl(28, 10%, 53%);
+}
+
+.amount {
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 540px;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

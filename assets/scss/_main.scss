@@ -1,0 +1,147 @@
+main {
+    max-width: 340px;
+    margin: auto;
+
+}
+
+.my-balance,
+.spending {
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.my-balance {
+    background-color: $soft-red;
+    color: $very-pale-orange;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-balance h1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $cream;
+    margin-bottom: .25rem;
+}
+
+.my-balance p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.spending {
+    background-color: $very-pale-orange;
+}
+
+.spending h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.week-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid $cream;
+}
+
+.week-day {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.week-day:hover .chart {
+    background-color: $half-red;
+}
+
+.week-day:hover .amount {
+    display: block;
+}
+
+.week-day p {
+    color: $medium-brown;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: .95rem;
+}
+
+.chart {
+    width: 40px;
+    background-color: $soft-red;
+    border-radius: 5px;
+    align-self: flex-start;
+    position: relative;
+    cursor: pointer;
+}
+
+.week-day:nth-of-type(3) .chart {
+    height: 52.36%;
+    background-color: $cyan;
+}
+
+.week-day:nth-of-type(3):hover .chart {
+    background-color: $half-cyan;
+}
+
+.month-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.this-month p {
+    color: $medium-brown;
+    font-size: 1.25rem;
+}
+
+.this-month h2 {
+    font-size: 2.5rem;
+    margin-top: .75rem;
+    margin-bottom: 0;
+    color: $dark-brown;
+
+}
+
+.last-month,
+.this-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.last-month h2 {
+    text-align: right;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+
+}
+
+.last-month p {
+    color: $medium-brown;
+}
+
+.amount {
+    background-color: black;
+    color: white;
+    padding: .3rem;
+    position: absolute;
+    top: -30px;
+    left: -5px;
+    font-size: .75rem;
+    border-radius: 5px;
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        max-width: 540px;
+    }
+}
